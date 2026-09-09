@@ -10,6 +10,7 @@ dependencies:
   dash_chat_2: ^0.0.21
   flutter:
     sdk: flutter
+  flutter_dotenv: ^6.0.1
   http: ^1.6.0
 
 dev_dependencies:
@@ -19,3 +20,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+  - .env

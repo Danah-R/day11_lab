@@ -1,8 +1,6 @@
-
 import 'dart:developer';
-
 import 'dart:convert';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class GeminiApi {
@@ -13,8 +11,7 @@ class GeminiApi {
     String link = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent";
     var uri = Uri.parse(link);
     Map<String, String> headers = {
-      "x-goog-api-key": "AQ.Ab8RN6KNy6k5j3VyqZNLkl75nErniqPucEt9wgFIDGZvhRN7hA",
-      "Content-Type": "application/json",
+      "x-goog-api-key": dotenv.get("api-key"),
       };
 
     Map<String, dynamic> body = {
